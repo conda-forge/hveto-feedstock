@@ -63,7 +63,7 @@ about:
   home: https://github.com/gwdetchar/hveto/
   license: GPLv3
   license_family: GPL
-  license_file: LICENSE
+  license_file: LICENSE.txt
   summary: A python implementation of the HierarchicalVeto (hveto) algorithm
   description: |
     This package provides a python implementation of the Hierarchichal Veto (hveto) algorithm
