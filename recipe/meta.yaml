@@ -1,5 +1,5 @@
 {% set name = "hveto" %}
-{% set version = "0.1.2" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 30d8fa78b6e00cd232e4ca620148744adfda7804cbf8cdf281de87e5732ea5b7
+  sha256: c57a2a92352e253090bac8d2cbc11e6c1223bc9e5bb206e077795ee7a85bfa66
 
 build:
   number: 0
