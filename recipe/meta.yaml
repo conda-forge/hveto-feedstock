@@ -25,20 +25,22 @@ requirements:
     - python >=2.7
     - dqsegdb
     - gitpython
-    - gwdetchar
+    - gwdetchar >=0.3.0
     - gwpy >=0.14.0
     - gwtrigfind
     - jinja2
-    - lscsoft-glue >=2.0.0
     - lxml
+    - MarkupPy >=1.14
     - matplotlib >=1.5
+    - pathlib  # [py<30]
     - numpy >=1.10
     - pykerberos
     - scipy
+    - pygments
 
 test:
   requires:
-    - pytest
+    - pytest >=3.1.0
     - mock  # [py<30]
   imports:
     - hveto
