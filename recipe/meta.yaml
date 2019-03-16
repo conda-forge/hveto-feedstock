@@ -1,5 +1,5 @@
 {% set name = "hveto" %}
-{% set version = "0.2.1" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c57a2a92352e253090bac8d2cbc11e6c1223bc9e5bb206e077795ee7a85bfa66
+  sha256: cc425dbca1d378deebdbb86a3dee04eea8166e1f7c8a8e12cd9980f2dad65880
 
 build:
   number: 1
@@ -24,7 +24,7 @@ requirements:
   run:
     - python >=2.7
     - gitpython
-    - gwdetchar >=0.3.0
+    - gwdetchar >=0.3.2
     - gwpy >=0.14.1
     - gwtrigfind
     - jinja2
