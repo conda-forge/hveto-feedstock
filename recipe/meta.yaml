@@ -25,7 +25,7 @@ requirements:
     - python >=2.7
     - gitpython
     - gwdetchar >=0.3.0
-    - gwpy >=0.14.0
+    - gwpy >=0.14.1
     - gwtrigfind
     - jinja2
     - lxml
