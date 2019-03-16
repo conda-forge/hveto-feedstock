@@ -25,7 +25,7 @@ requirements:
     - python >=2.7
     - dqsegdb
     - gitpython
-    - gwdetchar >=0.3.0
+    - gwdetchar >=0.3.2
     - gwpy >=0.14.0
     - gwtrigfind
     - jinja2
