@@ -10,7 +10,7 @@ source:
   sha256: cc425dbca1d378deebdbb86a3dee04eea8166e1f7c8a8e12cd9980f2dad65880
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
@@ -23,10 +23,9 @@ requirements:
     - setuptools
   run:
     - python >=2.7
-    - dqsegdb
     - gitpython
-    - gwdetchar >=0.3.2 
-    - gwpy >=0.14.0
+    - gwdetchar >=0.3.2
+    - gwpy >=0.14.1
     - gwtrigfind
     - jinja2
     - lxml
