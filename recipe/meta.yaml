@@ -1,5 +1,5 @@
 {% set name = "hveto" %}
-{% set version = "0.2.2" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cc425dbca1d378deebdbb86a3dee04eea8166e1f7c8a8e12cd9980f2dad65880
+  sha256: 2bd40f0ad97ea9e348cf93d9cf35ab364466c7ce7e5f86365efe7e08a1628826
 
 build:
   number: 1
@@ -24,7 +24,7 @@ requirements:
   run:
     - python >=2.7
     - gitpython
-    - gwdetchar >=0.3.2
+    - gwdetchar >=0.4.0
     - gwpy >=0.14.1
     - gwtrigfind
     - jinja2
@@ -35,7 +35,6 @@ requirements:
     - numpy >=1.10
     - pykerberos
     - scipy
-    - pygments
 
 test:
   requires:
