@@ -45,7 +45,6 @@ test:
     - hveto.config
     - hveto.core
     - hveto.html
-    - hveto.log
     - hveto.plot
     - hveto.segments
     - hveto.triggers
