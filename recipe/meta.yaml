@@ -1,5 +1,5 @@
 {% set name = "hveto" %}
-{% set version = "0.4.0" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,39 +7,37 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2d2d56407039431d3f8c0d31aca6b91d4717c051393cac48b6cc24424d041d44
+  sha256: ed673e84e8fa293f78dd1ad214dd6c213c8035b03f65af5f83eba808dd3a5d6c
 
 build:
   number: 1
   skip: true  # [win]
+  skip: true  # [py2k]
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   host:
-    - jsmin
-    - libsass
     - pip
     - python
     - setuptools
   run:
-    - python >=2.7
-    - gitpython
-    - gwdetchar >=0.5.0
-    - gwpy >=0.14.1
+    - python >=3.5
+    - gwdetchar >=1.0.0
+    - gwpy >=0.14.0
     - gwtrigfind
     - jinja2
     - lxml
     - MarkupPy >=1.14
     - matplotlib >=1.5
-    - pathlib  # [py<30]
     - numpy >=1.10
     - pykerberos
     - scipy
 
 test:
   requires:
+    - flake8
     - pytest >=3.1.0
-    - mock  # [py<30]
+    - coverage
   imports:
     - hveto
     - hveto.config
