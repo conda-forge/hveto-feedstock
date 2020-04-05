@@ -10,7 +10,7 @@ source:
   sha256: 6c5bd29a7f1dc5d33887f4d93188d1a19962af9e9781e583a0ed846151055c96
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
   script: "{{ PYTHON }} -m pip install . -vv"
 
@@ -27,7 +27,7 @@ requirements:
     - jinja2
     - lxml
     - MarkupPy >=1.14
-    - matplotlib >=1.5
+    - matplotlib-base >=1.5
     - numpy >=1.10
     - pykerberos
     - scipy
