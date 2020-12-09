@@ -21,13 +21,12 @@ requirements:
     - setuptools
   run:
     - python
-    - gwdetchar >=1.0.0
-    - gwpy >=0.14.0
+    - gwdetchar >=1.1.0
+    - gwpy >=2.0.0
     - gwtrigfind
-    - jinja2
     - lxml
     - MarkupPy >=1.14
-    - matplotlib-base >=1.5
+    - matplotlib-base >=3.1
     - numpy >=1.10
     - pykerberos
     - scipy
