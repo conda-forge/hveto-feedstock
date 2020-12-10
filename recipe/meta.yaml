@@ -1,5 +1,5 @@
 {% set name = "hveto" %}
-{% set version = "1.0.1" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,29 +7,28 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6c5bd29a7f1dc5d33887f4d93188d1a19962af9e9781e583a0ed846151055c96
+  sha256: b5ab95c692682491b945b763990d599e80e78d69d638fe892bbe8a13f93856fd
 
 build:
-  number: 2
-  skip: true  # [win]
+  number: 0
+  noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
     - setuptools
   run:
-    - python
-    - gwdetchar >=1.0.0
-    - gwpy >=0.14.0
+    - python >=3.6
+    - gwdetchar >=1.1.0
+    - gwpy >=2.0.0
     - gwtrigfind
-    - jinja2
     - lxml
     - MarkupPy >=1.14
-    - matplotlib-base >=1.5
+    - matplotlib-base >=3.1
     - numpy >=1.10
-    - pykerberos
+    - python-ligo-lw >=1.5.0
     - scipy
 
 test:
@@ -40,6 +39,7 @@ test:
   imports:
     - hveto
     - hveto.config
+    - hveto.const
     - hveto.core
     - hveto.html
     - hveto.plot
@@ -50,10 +50,10 @@ test:
   commands:
     # run unit tests
     - python -m pytest --pyargs {{ name }}
-    # check that scripts run ok
-    - hveto --help
-    - hveto-trace --help
-    - hveto-cache-events --help
+    # check that CLI modules run ok
+    - python -m hveto --help
+    - python -m hveto.cli.trace --help
+    - python -m hveto.cli.cache_events --help
 
 about:
   home: http://hveto.readthedocs.io
