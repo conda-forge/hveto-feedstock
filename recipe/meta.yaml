@@ -17,10 +17,10 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
     - setuptools
   run:
-    - python
+    - python >=3.6
     - gwdetchar >=1.1.0
     - gwpy >=2.0.0
     - gwtrigfind
@@ -28,7 +28,7 @@ requirements:
     - MarkupPy >=1.14
     - matplotlib-base >=3.1
     - numpy >=1.10
-    - python-ligo-lw >= 1.5.0
+    - python-ligo-lw >=1.5.0
     - scipy
 
 test:
@@ -53,7 +53,7 @@ test:
     # check that CLI modules run ok
     - python -m hveto --help
     - python -m hveto.cli.trace --help
-    - hveto.cli.cache_events --help
+    - python -m hveto.cli.cache_events --help
 
 about:
   home: http://hveto.readthedocs.io
