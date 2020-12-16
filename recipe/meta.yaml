@@ -1,5 +1,5 @@
 {% set name = "hveto" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b5ab95c692682491b945b763990d599e80e78d69d638fe892bbe8a13f93856fd
+  sha256: 433a250030c646b2efbb27c31ccda7222e2912594adaa5e58e7134617509e9c7
 
 build:
   number: 0
@@ -21,7 +21,7 @@ requirements:
     - setuptools
   run:
     - python >=3.6
-    - gwdetchar >=1.1.0
+    - gwdetchar >=2.0.0
     - gwpy >=2.0.0
     - gwtrigfind
     - lxml
@@ -33,9 +33,9 @@ requirements:
 
 test:
   requires:
+    - coverage
     - flake8
     - pytest >=3.1.0
-    - coverage
   imports:
     - hveto
     - hveto.config
@@ -52,8 +52,8 @@ test:
     - python -m pytest --pyargs {{ name }}
     # check that CLI modules run ok
     - python -m hveto --help
-    - python -m hveto.cli.trace --help
     - python -m hveto.cli.cache_events --help
+    - python -m hveto.cli.trace --help
 
 about:
   home: http://hveto.readthedocs.io
