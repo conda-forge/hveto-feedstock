@@ -1,5 +1,5 @@
 {% set name = "hveto" %}
-{% set version = "2.0.1" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 433a250030c646b2efbb27c31ccda7222e2912594adaa5e58e7134617509e9c7
+  sha256: c45f5f7eb13b86d518896770dcfd530b3831cc4dc993f5cf08b7af04714f7c3d
 
 build:
   number: 0
@@ -17,10 +17,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.8
     - setuptools
   run:
-    - python >=3.6
+    - python >=3.8
     - gwdetchar >=2.0.0
     - gwpy >=2.0.0
     - gwtrigfind
@@ -67,5 +67,8 @@ about:
 extra:
   recipe-maintainers:
     - alurban
+    - areeda
     - duncanmmacleod
+    - eagoetz
     - jrsmith02
+    - robertbruntz
