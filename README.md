@@ -1,11 +1,11 @@
-About hveto
-===========
+About hveto-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/hveto-feedstock/blob/main/LICENSE.txt)
 
 Home: http://hveto.readthedocs.io
 
 Package license: GPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/hveto-feedstock/blob/master/LICENSE.txt)
 
 Summary: A python implementation of the HierarchicalVeto (hveto) algorithm
 
@@ -18,8 +18,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6336&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/hveto-feedstock?branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6336&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/hveto-feedstock?branchName=main">
       </a>
     </td>
   </tr>
