@@ -1,5 +1,5 @@
 {% set name = "hveto" %}
-{% set version = "2.1.4" %}
+{% set version = "2.1.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ecf7e0d56ebd09bcfb4d545d1f162ea6a0da1b931d43b4b21fbc7eecdca270dd
+  sha256: ac156b5d08603b0fb8c5cb0aff524abccd721456fd0c97750c160fdce50be48c
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
 
@@ -23,7 +23,7 @@ requirements:
     - python >={{ python_min }}
     - gwdetchar >=2.0.0
     - gwpy >=2.0.0
-    - gwtrigfind
+    - gwtrigfind >=0.8.3
     - lxml
     - MarkupPy >=1.14
     - matplotlib-base >=3.1
