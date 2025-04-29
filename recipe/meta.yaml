@@ -23,7 +23,7 @@ requirements:
     - python >={{ python_min }}
     - gwdetchar >=2.0.0
     - gwpy >=2.0.0
-    - gwtrigfind >= 0.8.3
+    - gwtrigfind >=0.8.3
     - lxml
     - MarkupPy >=1.14
     - matplotlib-base >=3.1
