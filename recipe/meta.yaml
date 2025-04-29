@@ -10,17 +10,17 @@ source:
   sha256: ac156b5d08603b0fb8c5cb0aff524abccd721456fd0c97750c160fdce50be48c
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
     - pip
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - gwdetchar >=2.0.0
     - gwpy >=2.0.0
     - gwtrigfind >= 0.8.3
@@ -36,6 +36,7 @@ test:
     - coverage
     - flake8
     - pytest >=3.1.0
+    - python {{ python_min }}
   imports:
     - hveto
     - hveto.config
