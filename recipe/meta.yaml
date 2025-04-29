@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: ecf7e0d56ebd09bcfb4d545d1f162ea6a0da1b931d43b4b21fbc7eecdca270dd
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - gwdetchar >=2.0.0
     - gwpy >=2.0.0
     - gwtrigfind
@@ -36,6 +36,7 @@ test:
     - coverage
     - flake8
     - pytest >=3.1.0
+    - python {{ python_min }}
   imports:
     - hveto
     - hveto.config
