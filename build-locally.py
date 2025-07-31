@@ -92,6 +92,7 @@ def verify_config(ns):
             "Setting this variable implies agreement to the licensing terms of the SDK by Apple."
         )
 
+
     elif ns.config.startswith("osx"):
         if "OSX_SDK_DIR" not in os.environ:
             raise RuntimeError(
@@ -115,9 +116,7 @@ def main(args=None):
         action="store_true",
         help="Setup debug environment using `conda debug`",
     )
-    p.add_argument(
-        "--output-id", help="If running debug, specify the output to setup."
-    )
+    p.add_argument("--output-id", help="If running debug, specify the output to setup.")
 
     ns = p.parse_args(args=args)
     verify_config(ns)
@@ -133,9 +132,7 @@ def main(args=None):
         elif ns.config.startswith("win"):
             run_win_build(ns)
     finally:
-        recipe_license_file = os.path.join(
-            "recipe", "recipe-scripts-license.txt"
-        )
+        recipe_license_file = os.path.join("recipe", "recipe-scripts-license.txt")
         if os.path.exists(recipe_license_file):
             os.remove(recipe_license_file)
 
