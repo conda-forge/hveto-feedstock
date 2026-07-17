@@ -1,5 +1,5 @@
 {% set name = "hveto" %}
-{% set version = "2.1.8" %}
+{% set version = "2.1.9" %}
 
 # 2.1.9 - compatibility with gwpy 4.0
 
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a2191ca48ef98e460565bd79b4885a9b54d2aebb4997b43bbe162df821048e64
+  sha256: b0ead71b43e3141a4cc29e5b06439b9ec3fc693c72dee5d9a498b827c198815c
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
 
